@@ -1,123 +1,81 @@
-![License](https://img.shields.io/badge/License-Academic-blue.svg)
-
-## 📚 Course Information
-
-| Category          | Details                          |
-|-------------------|----------------------------------|
-| Course Title      | Mathematical Analysis for Computer Science |
-| Course Code       | CSE 361                          |
-| University        | Hajee Mohammad Danesh Science and Technology University |
-| Department        | Computer Science and Engineering |
-
-### 👨‍🎓 Student Information
-- **Name:** Md. Abu Shihab  
-- **ID:** 2102051  
-- **Level:** 3  
-- **Semester:** II  
-
-### 👨‍🏫 Submitted To
-- **Name:** Pankaj Bhowmik  
-- **Designation:** Lecturer  
-- **Department:** Computer Science and Engineering  
+🏫 **HAJEE MOHAMMAD DANESH SCIENCE AND TECHNOLOGY UNIVERSITY, DINAJPUR-5200**
 
 ---
 
-## 🔐 Algorithm Overview
+📖 **Course Information**  
+**Course Title:** Mathematical Analysis for Computer Science  
+**Course Code:** CSE 361  
 
-**ChaOSCipher** is an innovative symmetric encryption algorithm that leverages chaos theory principles to provide secure data encryption. Unlike traditional XOR-based ciphers, it uses:
+🧑‍🎓 **Submitted By:**  
+**Student ID:** 2102051  
+**Student Name:** Md. Abu Shihab  
+**Level:** 3  
+**Semester:** II  
+**Department:** Computer Science and Engineering  
 
-- 🌀 Logistic map chaos for dynamic key generation  
-- 🔀 Bitwise permutation for confusion  
-- 🧩 Custom S-box substitution for diffusion  
-- 🔄 Non-linear transformations  
-
-### ✅ Key Features
-
-| Feature | Description |
-|---------|-------------|
-| No XOR Dependency | Avoids common cryptographic patterns |
-| Chaotic Key Generation | Unpredictable key sequence generation |
-| Bitwise Operations | Enhanced security through bit manipulation |
-| Non-Linear Transformation | Resists frequency analysis attacks |
-
----
-
-## 📊 Flowcharts
-
-### Encryption Process
-![Encryption Flowchart](encryption_flow.png)
-
-### Decryption Process
-![Decryption Flowchart](decryption_flow.png)
+👨‍🏫 **Submitted To:**  
+**Name:** Pankaj Bhowmik  
+**Designation:** Lecturer  
+**Department:** Computer Science and Engineering  
+**University:** Hajee Mohammad Danesh Science and Technology University  
 
 ---
 
-## 🛠 Implementation Details
+## 🔐 Proposed Cryptographic Algorithm
 
-### Core Components
+### **Algorithm Name:** ChaOSCipher  
+A Chaos Theory-based Cipher using "Logistic Map", Bit Permutation, and S-Box Substitution
 
+---
+
+## 🧩 Introduction
+
+**ChaOSCipher** is a symmetric cryptographic algorithm inspired by **chaos theory**, primarily utilizing the **logistic map** for dynamic key generation, followed by **bitwise permutation** and **S-box substitution** to achieve high randomness and security. This makes frequency analysis and brute-force attacks difficult due to unpredictable key schedules and non-linear transformations.
+
+---
+
+## 🧠 Encryption Algorithm
+
+### ✨ Core Concepts
 1. **Logistic Map Function**  
-   ```math
-   x_{n+1} = 3.99 \cdot x_n (1 - x_n)
-Bitwise Permutation
+   \[
+   x_{n+1} = r \cdot x_n (1 - x_n)
+   \]  
+   - \( r = 3.99 \) ensures chaos behavior  
+   - \( x_0 \) is used as the key seed  
+   - Output used to derive keys and permutations
 
-cpp
-return ((byte & mask) << 4) | ((byte & ~mask) >> 4);
-Dynamic S-box Generation
+2. **Bitwise Permutation**  
+   - Each byte's bits are reordered using chaotic key values.
 
-cpp
-sBox[i] = (uint8_t)(x0 * 255);
-📂 File Structure
-text
-/ChaosCipher
-│   README.md
-│   chaoscipher.cpp
-│   encryption_flow.png
-│   decryption_flow.png
-🧪 Testing
-Test Case
-plaintext
-Plaintext: "CHAOS"
-Key Seed: 0.735
-Output
-plaintext
-Plaintext: CHAOS
-Ciphertext (hex): B2 DB 8F 1A 9C
-Decrypted: CHAOS
-How to Run
-Compile:
+3. **S-box Substitution**  
+   - A dynamically generated lookup table for non-linear substitution.
 
-bash
-g++ chaoscipher.cpp -o chaos
-Execute:
+---
 
-bash
-./chaos
-📜 License
-This project is for academic purposes only. Unauthorized commercial use is prohibited.
+### 🔒 **Encryption Steps**
+1. Generate a chaotic key sequence using logistic map with initial key seed \( x_0 \)
+2. For each character in plaintext:
+   - Apply bitwise permutation using corresponding chaotic key
+   - Replace permuted byte with value from S-box
+3. Output encrypted ciphertext
 
-📬 Contact
-For any queries, please contact:
+---
 
-✉️ shihab@student.hstu.ac.bd
+### 🔓 **Decryption Steps**
+1. Generate same chaotic key sequence using logistic map
+2. Generate inverse S-box from original S-box
+3. For each character in ciphertext:
+   - Reverse substitution using inverse S-box
+   - Apply inverse bitwise permutation
+4. Output decrypted plaintext
 
-🏢 Department of CSE, HSTU
+---
 
-text
+## 🧪 Example Test Case
 
-Key improvements made:
-1. Fixed all markdown formatting issues
-2. Ensured proper table rendering
-3. Corrected mathematical equation formatting
-4. Maintained consistent spacing and section organization
-5. Verified all code blocks display correctly
-6. Added proper image references
-7. Included complete file structure
-8. Preserved all original content while making it GitHub-compatible
+### ✅ Input:
+- Plaintext: `CHAOS`  
+- Key Seed (x₀): `0.735`  
 
-The README now displays properly on GitHub with:
-- Clean section headers
-- Working tables
-- Properly rendered code blocks
-- Correct image references
-- Consistent formatting throughout
+### ▶️ Output:
