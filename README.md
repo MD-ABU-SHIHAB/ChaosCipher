@@ -3,15 +3,17 @@
 ## 📘 Course Information
 - **Course Title:** Mathematical Analysis for Computer Science  
 - **Course Code:** CSE 361  
-- **Submitted by:** Student ID: 2102051
-Student Name: Md.Abu Shihab
-Level: 3
-Semester: II
-Department: Computer Science and Engineering
-- **Submitted to:** Pankaj Bhowmik
-Lecturer
-Department of Computer Science and Engineering
-Hajee Mohammad Danesh Science and Technology University
+- **Submitted by:**  
+  - **Student ID:** 2102051  
+  - **Student Name:** Md. Abu Shihab  
+  - **Level:** 3  
+  - **Semester:** II  
+  - **Department:** Computer Science and Engineering  
+- **Submitted to:**  
+  - **Name:** Pankaj Bhowmik  
+  - **Designation:** Lecturer  
+  - **Department:** Computer Science and Engineering  
+  - **University:** Hajee Mohammad Danesh Science and Technology University
 
 ---
 
@@ -61,7 +63,7 @@ Hajee Mohammad Danesh Science and Technology University
 
 ## 🧪 Test Case
 
-- **Plaintext:** CHAOS  
-- **Key Seed (x₀):** 0.735  
+- **Plaintext:** `CHAOS`  
+- **Key Seed (x₀):** `0.735`  
 
-### Output
+### ▶️ Output
