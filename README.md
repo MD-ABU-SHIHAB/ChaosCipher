@@ -1,69 +1,59 @@
-# Cryptographic Algorithm Assignment: "ChaosCipher – A Chaos Theory-Based Encryption System" (C++ Implementation)
+# ChaosCipher - A Chaos Theory-Based Encryption System
+![C++](https://img.shields.io/badge/C++-17-blue.svg)
+![License](https://img.shields.io/badge/License-Academic-blue.svg)
 
-## 📘 Course Information
-- **Course Title:** Mathematical Analysis for Computer Science  
-- **Course Code:** CSE 361  
-- **Submitted by:**  
-  - **Student ID:** 2102051  
-  - **Student Name:** Md. Abu Shihab  
-  - **Level:** 3  
-  - **Semester:** II  
-  - **Department:** Computer Science and Engineering  
-- **Submitted to:**  
-  - **Name:** Pankaj Bhowmik  
-  - **Designation:** Lecturer  
-  - **Department:** Computer Science and Engineering  
-  - **University:** Hajee Mohammad Danesh Science and Technology University
+## 📚 Course Information
+| Category          | Details                          |
+|-------------------|----------------------------------|
+| Course Title      | Mathematical Analysis for Computer Science |
+| Course Code       | CSE 361                          |
+| University        | Hajee Mohammad Danesh Science and Technology University |
+| Department        | Computer Science and Engineering |
+
+### 👨‍🎓 Student Information
+- **Name:** Md. Abu Shihab
+- **ID:** 2102051
+- **Level:** 3
+- **Semester:** II
+
+### 👨‍🏫 Submitted To
+- **Name:** Pankaj Bhowmik
+- **Designation:** Lecturer
+- **Department:** Computer Science and Engineering
 
 ---
 
-## 🔐 Algorithm Name: ChaOSCipher
+## 🔐 Algorithm Overview
+**ChaOSCipher** is an innovative symmetric encryption algorithm that leverages chaos theory principles to provide secure data encryption. Unlike traditional XOR-based ciphers, it uses:
 
-**ChaOSCipher** is a chaos theory-inspired symmetric encryption algorithm that utilizes **logistic maps** for dynamic key generation and **bitwise permutation** for enhanced confusion and diffusion. It ensures unpredictability and resistance to basic cryptanalytic attacks.
+- 🌀 Logistic map chaos for dynamic key generation
+- 🔀 Bitwise permutation for confusion
+- 🧩 Custom S-box substitution for diffusion
+- 🔄 Non-linear transformations
 
 ### ✅ Key Features
-- ❌ No XOR dependency  
-- 🔁 Chaotic key generation using logistic map  
-- 🔀 Bitwise permutation and custom S-box substitution  
-- 🔄 Non-linear transformation to break frequency patterns
+| Feature | Description |
+|---------|-------------|
+| No XOR Dependency | Avoids common cryptographic patterns |
+| Chaotic Key Generation | Unpredictable key sequence generation |
+| Bitwise Operations | Enhanced security through bit manipulation |
+| Non-Linear Transformation | Resists frequency analysis attacks |
 
 ---
 
-## 🧠 Algorithm Design
+## 📊 Flowcharts
 
-### ⚙️ Core Components
-1. **Logistic Map Function**  
-   \[
-   x_{n+1} = r \cdot x_n (1 - x_n)
-   \]  
-   where \( r = 3.99 \), \( x_0 \) is the seed
+### Encryption Process
+![Encryption Flowchart](encryption_flow.png)
 
-2. **Bitwise Permutation**  
-   Bitwise rearrangement of each byte using chaotic values
-
-3. **S-box Substitution**  
-   Non-linear byte substitution based on chaotic sequence
+### Decryption Process
+![Decryption Flowchart](decryption_flow.png)
 
 ---
 
-## 🔒 Encryption Process
-1. Generate chaotic key sequence from seed
-2. Permute bits of each plaintext byte
-3. Substitute each permuted byte using S-box
-4. Output the ciphertext
+## 🛠 Implementation Details
 
----
-
-## 🔓 Decryption Process
-1. Inverse S-box substitution
-2. Reverse bit permutation
-3. Reconstruct original plaintext
-
----
-
-## 🧪 Test Case
-
-- **Plaintext:** `CHAOS`  
-- **Key Seed (x₀):** `0.735`  
-
-### ▶️ Output
+### Core Components
+1. **Logistic Map Function**
+   ```math
+   x_{n+1} = 3.99 \cdot x_n (1 - x_n)
